@@ -1,4 +1,3 @@
-PSEUDO CODE YEAH!
 How do you write pseudo code?
 How do you write in C++ anyways? ._.
 
@@ -6,31 +5,57 @@ How do you write in C++ anyways? ._.
 
 
 ---------------------------------------------------
-
-int stage = -1;
-int timeForShift;
-int gameIsInPlay = 1;		//I'm not sure if this is correct :/
-
-while (gameIsInPlay) {		//loops the game foreverrrr
-	if (winning) {			//starting game
-		stage = 0;
-		timeForShift = (rand() % 50) + 10 * (stage/2);		//random number mod 50 + 10 * stage/2 = seconds till shift?
-		Bunny bunny = new Bunny();				//sounds like horrible redundancy. Makes a bunny class?
-		Links link[numberOfProj1's] = new Links;
-		for (i = 0; i < numberOfProj1's; i++)
-			link[i] = //Somehow fill this up with links to the projects? XD		
-		while (timeForShift > 0) {
-			if (bunny.pressed()) {
-				//decrease time? change scene?
-			}
-			if (timeForShift == 1) {
-				stage = rand() % 5;			//random number mod 5 = stage number
-				moveBunny();				//change bunny location
-				moveLinks();				//move icons for other people's sites
-				changeSpawn();				//place the player in one of the scenes
-			} else
-				timeForShift--;
+int main() {
+	int timeForShift;
+	Bunny bunny = new Bunny;	//BUNNY!
+	Stage stage = new Stage;	//STAGE!
+	Links links = new links;	//Links to different people's sites
+	int gameIsInPlay = 1;		//I'm not sure if this is correct :/
+	int winning = 1;
+	
+	while (gameIsInPlay) {		//loops the game foreverrrr
+		if (winning) {			//starting game
+			prepareGame();		//prepare game
+			playGame();			//play it
 		}
-	} else {				//game lost
-		displayGameOver();					//wipe screen, display Dream Again?
+		if (timeForShift == 0) {
+			winning = gameOver();			//game over :C
+		}
+	}
+	return 0;
+}
+
+void prepareGame() {
+	stage.randomize();			//random stage! maybe with stage = rand() % 5
+	bunny.randomize();			//random position in scene
+	timeForShift = (rand() % 10) * stage.number()	//random mod 10 * stage number = time before shift
+	links.randomize();			//put links in different places
+}
+
+void playGame() {
+	while (timeForShift > 0) {
+		stage.fade(timeForShift);			//fade the stage according to the time
+		//how to know if things have been pressed or swiped? I don't know :S
+		//yay pseudo code ;-;
+		if (stage.swiped)
+			//change scene
+		if (bunny.pressed)
+			//Stuff happens... switch scene?
+		if (links.pressed)
+			//open browser to the link
+		timeForShift--;
+	}
+}
+
+int gameOver() {
+	int deciding = 1;				//loop it at the game over screen
+	while (deciding) {
+		if (playAgain.pressed) {	//pressed play again!
+			deciding = 0;
+			return 1;
+		}
+		if (quit.pressed) {			//pressed Quit :C
+			deciding = 0;
+			return 0;
+		}
 }
