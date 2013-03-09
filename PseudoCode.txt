@@ -15,7 +15,14 @@ while (gameIsInPlay) {		//loops the game foreverrrr
 	if (winning) {			//starting game
 		stage = 0;
 		timeForShift = (rand() % 50) + 10 * (stage/2);		//random number mod 50 + 10 * stage/2 = seconds till shift?
+		Bunny bunny = new Bunny();				//sounds like horrible redundancy. Makes a bunny class?
+		Links link[numberOfProj1's] = new Links;
+		for (i = 0; i < numberOfProj1's; i++)
+			link[i] = //Somehow fill this up with links to the projects? XD		
 		while (timeForShift > 0) {
+			if (bunny.pressed()) {
+				//decrease time? change scene?
+			}
 			if (timeForShift == 1) {
 				stage = rand() % 5;			//random number mod 5 = stage number
 				moveBunny();				//change bunny location
@@ -25,5 +32,5 @@ while (gameIsInPlay) {		//loops the game foreverrrr
 				timeForShift--;
 		}
 	} else {				//game lost
-		displayGameOver();					//with a play again?
+		displayGameOver();					//wipe screen, display Dream Again?
 }
