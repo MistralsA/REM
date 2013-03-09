@@ -1,0 +1,29 @@
+PSEUDO CODE YEAH!
+How do you write pseudo code?
+How do you write in C++ anyways? ._.
+
+-S
+
+
+---------------------------------------------------
+
+int stage = -1;
+int timeForShift;
+int gameIsInPlay = 1;		//I'm not sure if this is correct :/
+
+while (gameIsInPlay) {		//loops the game foreverrrr
+	if (winning) {			//starting game
+		stage = 0;
+		timeForShift = (rand() % 50) + 10 * (stage/2);		//random number mod 50 + 10 * stage/2 = seconds till shift?
+		while (timeForShift > 0) {
+			if (timeForShift == 1) {
+				stage = rand() % 5;			//random number mod 5 = stage number
+				moveBunny();				//change bunny location
+				moveLinks();				//move icons for other people's sites
+				changeSpawn();				//place the player in one of the scenes
+			} else
+				timeForShift--;
+		}
+	} else {				//game lost
+		displayGameOver();					//with a play again?
+}
