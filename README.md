@@ -1,6 +1,12 @@
 REM
 ===
 
-In Rem
+Finally got to program something!
+Though it only works on macs... and I have a PC :C
+So far it does~
+- Switch Stage number
+- Some sort of transparency that corresponds with the time remaining before switching
+- Some kind of image placing when time changes.
 
-I EDITED THIS - Sandra
+Yay~?
+-Sandra 03.11.13
