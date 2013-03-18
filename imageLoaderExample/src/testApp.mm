@@ -6,6 +6,9 @@ void testApp::setup(){
 	
 	bunny.loadImage("images/transparency.png");
     funny.loadImage("images/bike_icon.png");
+    bg.loadImage("images/bg.png");
+    button.loadImage("images/button.png");
+    buttonglow.loadImage("images/buttonglow.png");
     vagRounded.loadFont("vag.ttf", 18);
     ofBackground(255, 255, 255);
     stageNum = 1;
@@ -37,7 +40,7 @@ void testApp::draw(){
     {
         stageNum = stageNext;
         stageNext = ofRandom(1, 5);
-        timeForShift = ofRandom(10, 20) * stageNum;
+        timeForShift = ofRandom(20, 40) * stageNum;
     }
     ofSetColor(255, 255, 255);
     funny.draw(20*stageNum, 20*stageNext);

@@ -26,6 +26,9 @@ class testApp : public ofxiPhoneApp{
         
         ofImage bunny;
         ofImage funny;
+        ofImage bg;
+        ofImage button;
+        ofImage buttonglow;
         float timeForShift;
         int stageNum;
         int stageNext;
