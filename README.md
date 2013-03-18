@@ -7,6 +7,9 @@ So far it does~
 - Switch Stage number
 - Some sort of transparency that corresponds with the time remaining before switching
 - Some kind of image placing when time changes.
+- Bunny moves!
+- Room moves!
+- Need more rooms!
 
 Yay~?
--Sandra 03.11.13
+-Sandra 03.18.13
