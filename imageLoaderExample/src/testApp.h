@@ -24,13 +24,14 @@ class testApp : public ofxiPhoneApp{
         void deviceOrientationChanged(int newOrientation);
         void loadRoom();
         void testShift();
+        void bunnyImage();
+        void playSound();
     
         ofImage bunny;
         ofImage cat;
-        ofImage bg;
-        ofImage button;
-        ofImage buttonglow;
         ofImage room;
+        ofImage pillow;
+        ofSoundPlayer song;
         float timeForShift;
         int stageNum;
         int stageNext;
