@@ -23,9 +23,10 @@ class testApp : public ofxiPhoneApp{
         void gotMemoryWarning();
         void deviceOrientationChanged(int newOrientation);
         void loadRoom();
-        
+        void testShift();
+    
         ofImage bunny;
-        ofImage funny;
+        ofImage cat;
         ofImage bg;
         ofImage button;
         ofImage buttonglow;
@@ -38,8 +39,10 @@ class testApp : public ofxiPhoneApp{
         int roomstate;
         int touchux;
         int bunnyPos[3];
+        int catPos[3];
                 
         ofTrueTypeFont vagRounded;
         char eventString[255];
+        float scaleTouch(float, float, float);
 
 };
